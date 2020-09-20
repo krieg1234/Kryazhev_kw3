@@ -1,3 +1,5 @@
 Hello Wold!
 My new rating
 Third row
+Comment was added
+Another third row
