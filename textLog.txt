@@ -1,0 +1,312 @@
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3
+$ git init
+Initialized empty Git repository in C:/Users/KRiEG/Documents/GitHub/FinalPractic/Kryazhev_kw3/.git/
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git remote add origin https://github.com/krieg1234/Kryazhev_kw3.git
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ echo 'Hello Wold!' >> project.txt
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git add .
+warning: LF will be replaced by CRLF in project.txt.
+The file will have its original line endings in your working directory
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git commit -m 'add Hello World'
+[master (root-commit) cf8368b] add Hello World
+ 1 file changed, 1 insertion(+)
+ create mode 100644 project.txt
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git checkout -b ratingBranch
+Switched to a new branch 'ratingBranch'
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (ratingBranch)
+$ code project.txt
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (ratingBranch)
+$ git add .
+warning: LF will be replaced by CRLF in project.txt.
+The file will have its original line endings in your working directory
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (ratingBranch)
+$ git commit -m 'add rating'
+[ratingBranch 5d1414c] add rating
+ 1 file changed, 2 insertions(+)
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (ratingBranch)
+$ git checkout -b commentBranch
+Switched to a new branch 'commentBranch'
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (commentBranch)
+$ code project.txt
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (commentBranch)
+$ git add .
+warning: LF will be replaced by CRLF in project.txt.
+The file will have its original line endings in your working directory
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (commentBranch)
+$ git commit -m 'add comment'
+[commentBranch 2122fc5] add comment
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (commentBranch)
+$ git checkout master
+Switched to branch 'master'
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git merge ratingBranch
+Updating cf8368b..5d1414c
+Fast-forward
+ project.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git add .
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git commit -m 'merge with rating'
+On branch master
+nothing to commit, working tree clean
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git merge commentBranch
+Updating 5d1414c..2122fc5
+Fast-forward
+ project.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ code project.txt
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git checkout ratingBranch
+Switched to branch 'ratingBranch'
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (ratingBranch)
+$ git checkout master
+Switched to branch 'master'
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git merge ratingBranch
+Already up to date.
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git checkout com
+error: pathspec 'com' did not match any file(s) known to git
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git checkout commentBranch
+Switched to branch 'commentBranch'
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (commentBranch)
+$ git merge ratingBranch
+Already up to date.
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (commentBranch)
+$ git checkout master
+Switched to branch 'master'
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git add project.txt
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git commit -m 'merge with commentBranch'
+On branch master
+nothing to commit, working tree clean
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git merge ratingBranch
+Already up to date.
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git checkout ratingBranch
+Switched to branch 'ratingBranch'
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (ratingBranch)
+$ git checkout commentBranch
+Switched to branch 'commentBranch'
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (commentBranch)
+$ git status
+On branch commentBranch
+nothing to commit, working tree clean
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (commentBranch)
+$ git checkout ratingBranch
+Switched to branch 'ratingBranch'
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (ratingBranch)
+$ git status
+On branch ratingBranch
+nothing to commit, working tree clean
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (ratingBranch)
+$ git merge commentBranch
+Updating 5d1414c..2122fc5
+Fast-forward
+ project.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (ratingBranch)
+$ git status
+On branch ratingBranch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   project.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (ratingBranch)
+$ git add project.txt
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (ratingBranch)
+$ git commit -m 'zaputalsya))'
+[ratingBranch b4a81f2] zaputalsya))
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (ratingBranch)
+$ git pull origin master
+fatal: couldn't find remote ref master
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (ratingBranch)
+$ git push origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (9/9), 698 bytes | 698.00 KiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/krieg1234/Kryazhev_kw3.git
+ * [new branch]      master -> master
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (ratingBranch)
+$ git push origin ratingBranch
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 272 bytes | 272.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ratingBranch' on GitHub by visiting:
+remote:      https://github.com/krieg1234/Kryazhev_kw3/pull/new/ratingBranch
+remote:
+To https://github.com/krieg1234/Kryazhev_kw3.git
+ * [new branch]      ratingBranch -> ratingBranch
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (ratingBranch)
+$ git push origin commentBranch
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'commentBranch' on GitHub by visiting:
+remote:      https://github.com/krieg1234/Kryazhev_kw3/pull/new/commentBranch
+remote:
+To https://github.com/krieg1234/Kryazhev_kw3.git
+ * [new branch]      commentBranch -> commentBranch
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (ratingBranch)
+$ git checkout master
+Switched to branch 'master'
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git merge ratingBranch
+Updating 2122fc5..b4a81f2
+Fast-forward
+ project.txt | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git merge commentBranch
+Already up to date.
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git checkout commentBranch
+error: Your local changes to the following files would be overwritten by checkout:
+        project.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git add .
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git commit -m 'add third row'
+[master fb10628] add third row
+ 1 file changed, 1 insertion(+)
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git checkout commentBranch
+Switched to branch 'commentBranch'
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (commentBranch)
+$ git add .
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (commentBranch)
+$ git commit -m 'add another third row'
+[commentBranch 4c445f3] add another third row
+ 1 file changed, 1 insertion(+)
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (commentBranch)
+$ git checkout mas
+error: pathspec 'mas' did not match any file(s) known to git
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (commentBranch)
+$ git checkout master
+Switched to branch 'master'
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git merge commentBranch
+Auto-merging project.txt
+CONFLICT (content): Merge conflict in project.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   project.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master|MERGING)
+$ git commit project.txt -m 'merget rating, comment and helloWorld'
+fatal: cannot do a partial commit during a merge.
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master|MERGING)
+$ git add .
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master|MERGING)
+$ git commit -m 'merget rating, comment and helloWorld'
+[master 3b160f5] merget rating, comment and helloWorld
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ git push origin master
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (9/9), 863 bytes | 863.00 KiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/krieg1234/Kryazhev_kw3.git
+   2122fc5..3b160f5  master -> master
+
+KRiEG@KRiEG-PC MINGW64 ~/Documents/GitHub/FinalPractic/Kryazhev_kw3 (master)
+$ code textLog.txt
